@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .login-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+      }
+
+      .login-container img {
+        width: 100px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+
+      .login-container h2 {
+        margin: 0 0 20px;
+        font-weight: normal;
+        color: #333;
+      }
+
+      .login-container label {
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .login-container input[type="text"],
+      .login-container input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .login-container button {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .login-container button.cancel {
+        background-color: #f44336;
+        margin-top: 10px;
+      }
+
+      .login-container .remember-me {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .login-container .remember-me input {
+        margin-right: 5px;
+      }
+
+      .login-container .forgot-password {
+        text-align: right;
+        margin-top: 10px;
+      }
+
+      .login-container .forgot-password a {
+        color: #000;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <img src="https://via.placeholder.com/100" />
+      <h2>Login</h2>
+      <form action="/login" method="post">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter Username"
+          required
+        />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter Password"
+          required
+        />
+
+        <button type="submit">Login</button>
+
+        <div class="remember-me">
+          <input type="checkbox" id="remember-me" name="remember-me" />
+          <label for="remember-me">Remember me</label>
+        </div>
+
+        <div class="forgot-password">
+          <a href="#">Forgot <span>password?</span></a>
+        </div>
+
+        <button type="button" class="cancel">Cancel</button>
+      </form>
+    </div>
+  </body>
+</html>
